@@ -1,0 +1,20 @@
+---
+applications:
+- name: myApprouterConfigurationApp
+  buildpacks:
+    - nodejs_buildpack
+  host: myapprouterconfapp
+  path: app_folder
+  random-route : true
+  memory: 128M
+  services:
+    - CAPTraining-uaa
+  env:
+    destinations: >
+      [
+          {
+              "name": "destination_cmo-portal",
+              "url": "https://e1690cebtrial-dev-captraining-srv.cfapps.us10.hana.ondemand.com/",
+              "forwardAuthToken": true
+          }
+      ]

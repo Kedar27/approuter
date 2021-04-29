@@ -1,0 +1,9 @@
+{
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/(.*)$",
+      "destination": "destination_cmo-portal"
+    }
+  ]
+}
